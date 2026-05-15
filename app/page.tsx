@@ -94,7 +94,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
 
   return (
 
-    <main className="relative min-h-screen bg-black text-white overflow-hidden">
+    <main className="relative min-h-screen bg-black text-white overflow-x-hidden">
 
       {/* VIDEO BACKGROUND */}
 
@@ -108,7 +108,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
         <source src="/grill.mp4" type="video/mp4" />
       </video>
 
-      {/* OVERLAY */}
+      {/* DARK OVERLAY */}
 
       <div className="fixed inset-0 bg-black/70"></div>
 
@@ -167,13 +167,13 @@ Este regalo fue obsequiado por Andrés y Erika.`;
       {
         showGift && (
 
-          <section className="relative z-10 px-5 py-20 flex justify-center">
+          <section className="relative z-10 px-5 py-20">
 
             <motion.div
               initial={{ opacity:0, scale:.9 }}
               animate={{ opacity:1, scale:1 }}
               transition={{ duration:.8 }}
-              className="max-w-md mx-auto"
+              className="w-full max-w-md mx-auto"
             >
 
               <div className="overflow-hidden rounded-[32px]">
@@ -292,7 +292,10 @@ Este regalo fue obsequiado por Andrés y Erika.`;
                       opacity: scratchCount >= 40 ? 1 : 0,
                       scale: scratchCount >= 40 ? 1 : .8
                     }}
-                    transition={{duration:3,ease:"easeOut"}}
+                    transition={{
+                      duration:1.4,
+                      ease:"easeOut"
+                    }}
                     className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center"
                   >
 
