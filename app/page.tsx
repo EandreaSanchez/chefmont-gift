@@ -172,7 +172,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
             <motion.div
               initial={{ opacity:0, scale:.9 }}
               animate={{ opacity:1, scale:1 }}
-              transition={{ duration:4 }}
+              transition={{ duration:2.0 }}
               className="w-full max-w-md mx-auto"
             >
 
