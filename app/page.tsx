@@ -110,7 +110,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
 
       {/* DARK OVERLAY */}
 
-      <div className="fixed inset-0 bg-black/70"></div>
+      <div className="fixed inset-0 bg-black/45"></div>
 
       {/* HERO */}
 
