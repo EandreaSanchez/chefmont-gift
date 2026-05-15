@@ -27,7 +27,7 @@ export default function Home() {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
-    // Metallic gradient
+    // Metallic effect
 
     const gradient = ctx.createLinearGradient(
       0,
@@ -41,9 +41,8 @@ export default function Home() {
     gradient.addColorStop(1, "#71717a");
 
     ctx.fillStyle = gradient;
-    ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    // Text
+    ctx.fillRect(0,0,canvas.width,canvas.height);
 
     ctx.fillStyle = "#000";
 
@@ -61,28 +60,28 @@ export default function Home() {
 
   function revealGift(){
 
-  setTimeout(() => {
+    // Mostrar opciones
 
     setShowClasses(true);
 
-  }, 1200);
+    // Scroll elegante
 
-  setTimeout(() => {
+    setTimeout(() => {
 
-    const section = document.getElementById("experience-section");
+      const section = document.getElementById("experience-section");
 
-    if(section){
+      if(section){
 
-      section.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-      });
+        section.scrollIntoView({
+          behavior:"smooth",
+          block:"start"
+        });
 
-    }
+      }
 
-  }, 2600);
+    }, 1800);
 
-}
+  }
 
   function reserve(className:string){
 
@@ -106,7 +105,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
 
     <main className="relative min-h-screen bg-black text-white overflow-x-hidden">
 
-      {/* VIDEO BACKGROUND */}
+      {/* VIDEO */}
 
       <video
         autoPlay
@@ -118,7 +117,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
         <source src="/grill.mp4" type="video/mp4" />
       </video>
 
-      {/* DARK OVERLAY */}
+      {/* OVERLAY */}
 
       <div className="fixed inset-0 bg-black/45"></div>
 
@@ -156,7 +155,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
               setTimeout(() => {
 
                 window.scrollTo({
-                  top: window.innerHeight,
+                  top: window.innerHeight * 0.92,
                   behavior:"smooth"
                 });
 
@@ -172,7 +171,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
 
       </section>
 
-      {/* SCRATCH CARD */}
+      {/* SCRATCH */}
 
       {
         showGift && (
@@ -182,7 +181,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
             <motion.div
               initial={{ opacity:0, scale:.9 }}
               animate={{ opacity:1, scale:1 }}
-              transition={{ duration:2.0 }}
+              transition={{ duration:.8 }}
               className="w-full max-w-md mx-auto"
             >
 
@@ -228,7 +227,9 @@ Este regalo fue obsequiado por Andrés y Erika.`;
                       ctx.globalCompositeOperation = "destination-out";
 
                       ctx.beginPath();
+
                       ctx.arc(x,y,35,0,Math.PI * 2);
+
                       ctx.fill();
 
                       setScratchCount(prev => {
@@ -275,7 +276,9 @@ Este regalo fue obsequiado por Andrés y Erika.`;
                       ctx.globalCompositeOperation = "destination-out";
 
                       ctx.beginPath();
+
                       ctx.arc(x,y,40,0,Math.PI * 2);
+
                       ctx.fill();
 
                       setScratchCount(prev => {
@@ -348,7 +351,10 @@ Este regalo fue obsequiado por Andrés y Erika.`;
       {
         showClasses && (
 
-          <section  id="experience-section" className="relative z-10 px-5 pb-32">
+          <section
+            id="experience-section"
+            className="relative z-10 px-5 pb-32"
+          >
 
             <motion.div
               initial={{ opacity:0 }}
