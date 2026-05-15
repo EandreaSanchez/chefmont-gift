@@ -87,7 +87,7 @@ ${className}
 Este regalo fue obsequiado por Andrés y Erika.`;
 
     window.open(
-`https://wa.me/573001112233?text=${encodeURIComponent(message)}`
+`https://wa.me/573052444768?text=${encodeURIComponent(message)}`
     );
 
   }
@@ -108,7 +108,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
         <source src="/grill.mp4" type="video/mp4" />
       </video>
 
-      {/* DARK OVERLAY */}
+      {/* OVERLAY */}
 
       <div className="fixed inset-0 bg-black/70"></div>
 
@@ -130,12 +130,12 @@ Este regalo fue obsequiado por Andrés y Erika.`;
           <h1 className="text-4xl font-bold leading-tight mb-6">
             Diego,
             <br />
-            algunas experiencias
-            merecen compartirse entre hermanos.
+            Andrés y Erika quieren regalarte
+            una experiencia para recordar.
           </h1>
 
           <p className="text-white/70 text-base leading-relaxed">
-            Andrés y Erika prepararon este regalo para ti.
+            Una experiencia gastronómica pensada especialmente para ti.
           </p>
 
           <button
@@ -314,7 +314,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
                     </p>
 
                     <p className="text-white/40 text-sm mt-6 italic">
-                      Para los gemelos siempre hay una buena excusa para compartir.
+                      Porque las mejores experiencias siempre se comparten.
                     </p>
 
                   </motion.div>
