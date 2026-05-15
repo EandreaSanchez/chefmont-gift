@@ -103,7 +103,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
         muted
         loop
         playsInline
-        className="fixed inset-0 w-full h-full object-cover opacity-30"
+        className="fixed inset-0 w-full h-full object-cover opacity-40"
       >
         <source src="/grill.mp4" type="video/mp4" />
       </video>
