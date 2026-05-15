@@ -167,7 +167,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
       {
         showGift && (
 
-          <section className="relative z-10 px-5 pb-24">
+          <section className="relative z-10 min-h-screen flex items-center justify-center px-5">
 
             <motion.div
               initial={{ opacity:0, scale:.9 }}
