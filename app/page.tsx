@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -345,90 +346,49 @@ Este regalo fue obsequiado por Andrés y Erika.`;
 
         )
       }
+     {
+  showClasses && (
 
-      {/* EXPERIENCIAS */}
+    <section
+      id="experience-section"
+      className="relative z-10 min-h-screen flex items-center justify-center px-5 pb-24"
+    >
 
-      {
-        showClasses && (
+      <motion.div
+        initial={{ opacity:0, y:60 }}
+        animate={{ opacity:1, y:0 }}
+        transition={{
+          duration:1.4,
+          ease:"easeOut"
+        }}
+        className="w-full max-w-md"
+      >
 
-          <section
-            id="experience-section"
-            className="relative z-10 px-5 pb-32"
-          >
+        <div className="relative">
 
-            <motion.div
-              initial={{ opacity:0 }}
-              animate={{ opacity:1 }}
-              transition={{ duration:1 }}
-              className="max-w-md mx-auto"
-            >
+          {/* Glow */}
 
-              <h2 className="text-4xl font-bold text-center mb-12">
-                Escoge tu regalo
-              </h2>
+          <div className="absolute inset-0 bg-red-500/20 blur-3xl rounded-full scale-110"></div>
 
-              <div className="flex flex-col gap-6">
+          {/* IMAGE */}
 
-                {
-                  [
-                    {
-                      title:"🍔 Hamburguesas & Caipiriña",
-                      date:"20 mayo · Presencial",
-                    },
-                    {
-                      title:"🍱 Almuerzos para la semana",
-                      date:"20 mayo · Virtual",
-                    },
-                    {
-                      title:"🍟 Fast Food con amigos",
-                      date:"22 mayo · Virtual",
-                    },
-                    {
-                      title:"🔥 Parrilla vs Barril",
-                      date:"23 mayo · Presencial",
-                    }
-                  ].map((item,index)=>(
+          <Image
+            src="/bono.jpg"
+            alt="Bono regalo Chef Mont"
+            width={700}
+            height={1200}
+            className="relative z-10 rounded-[32px] shadow-2xl border border-white/10"
+          />
 
-                    <motion.div
-                      key={index}
-                      whileTap={{ scale:.98 }}
-                      className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl p-6 shadow-xl"
-                    >
+        </div>
 
-                      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent"></div>
+      </motion.div>
 
-                      <div className="relative z-10">
+    </section>
 
-                        <h3 className="text-2xl font-bold mb-4 leading-snug">
-                          {item.title}
-                        </h3>
-
-                        <p className="text-white/60 text-base mb-8">
-                          {item.date}
-                        </p>
-
-                        <button
-                          onClick={() => reserve(item.title)}
-                          className="w-full py-4 rounded-full bg-orange-500 hover:bg-orange-400 transition font-semibold"
-                        >
-                          Reservar experiencia
-                        </button>
-
-                      </div>
-
-                    </motion.div>
-
-                  ))
-                }
-
-              </div>
-
-            </motion.div>
-
-          </section>
-
-        )
-      }
+  )
+}
+      
 
     </main>
 
