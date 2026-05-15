@@ -61,18 +61,28 @@ export default function Home() {
 
   function revealGift(){
 
+  setTimeout(() => {
+
     setShowClasses(true);
 
-    setTimeout(() => {
+  }, 1200);
 
-      window.scrollTo({
-        top: window.innerHeight * 1.4,
-        behavior:"smooth"
+  setTimeout(() => {
+
+    const section = document.getElementById("experience-section");
+
+    if(section){
+
+      section.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
       });
 
-    }, 700);
+    }
 
-  }
+  }, 2600);
+
+}
 
   function reserve(className:string){
 
