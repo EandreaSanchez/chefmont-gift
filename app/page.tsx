@@ -292,7 +292,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
                       opacity: scratchCount >= 40 ? 1 : 0,
                       scale: scratchCount >= 40 ? 1 : .8
                     }}
-                    transition={{ duration:.8 }}
+                    transition={{duration:1.4,ease:"easeOut"}}
                     className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center"
                   >
 
