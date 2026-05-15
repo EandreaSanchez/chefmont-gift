@@ -146,7 +146,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
               setTimeout(() => {
 
                 window.scrollTo({
-                  top: window.innerHeight * 0.92,
+                  top: window.innerHeight,
                   behavior:"smooth"
                 });
 
