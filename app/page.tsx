@@ -348,7 +348,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
       {
         showClasses && (
 
-          <section className="relative z-10 px-5 pb-32">
+          <section  id="experience-section" className="relative z-10 px-5 pb-32">
 
             <motion.div
               initial={{ opacity:0 }}
