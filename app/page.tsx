@@ -373,7 +373,7 @@ Este regalo fue obsequiado por Andrés y Erika.`;
           {/* IMAGE */}
 
           <Image
-            src="/bono.jpg"
+            src="/bono.png"
             alt="Bono regalo Chef Mont"
             width={700}
             height={1200}
